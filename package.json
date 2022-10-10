@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/idmytro/vite-libs/issues"
   },
-  "homepage": "https://github.com/idmytro/vite-libs#readme"
+  "homepage": "https://github.com/idmytro/vite-libs#readme",
+  "devDependencies": {
+    "rollup": "^2.79.1",
+    "rollup-plugin-vue": "^6.0.0"
+  }
 }
