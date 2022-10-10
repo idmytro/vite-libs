@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "module": "dist/vite-libs.js",
+  "unpkg": "dist/vite-libs.umd.js",
   "scripts": {
+    "roll": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +21,11 @@
   },
   "homepage": "https://github.com/idmytro/vite-libs#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.0",
     "rollup": "^2.79.1",
     "rollup-plugin-vue": "^6.0.0"
+  },
+  "dependencies": {
+    "vue-slider-component": "^3.2.20"
   }
 }
