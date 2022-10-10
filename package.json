@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "module": "dist/vite-libs.js",
+  "module": "dist/vite-libs.mjs",
   "unpkg": "dist/vite-libs.umd.js",
   "scripts": {
     "build": "vite build",
