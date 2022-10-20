@@ -1,31 +1,35 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+
+import babel from 'vite-plugin-babel';
 
 export default defineConfig({
+  plugins: [
+    babel(),
+  ],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/index.js'),
-      name: 'ViteLibs',
-      // the proper extensions will be added
-      fileName: 'vite-libs'
+      name: 'vite-libs',
+      fileName: 'vite-libs',
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ['vue'],
+      external: [
+        // 'vue',
+        'quill',
+      ],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
         globals: {
-          vue: 'Vue'
-        }
-      }
+          // vue: 'Vue',
+          quill: 'quill'
+        },
+      },
     },
     build: {
       commonjsOptions: {
         requireReturnsDefault: true,
       },
     },
-  }
-})
+  },
+});
