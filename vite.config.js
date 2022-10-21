@@ -22,7 +22,7 @@ export default defineConfig({
       output: {
         globals: {
           // vue: 'Vue',
-          quill: 'quill'
+          quill: 'Quill'
         },
       },
     },

@@ -1,111 +1,111 @@
-import se from "quill";
-function ye(r) {
-  return r && r.__esModule && Object.prototype.hasOwnProperty.call(r, "default") ? r.default : r;
+import le from "quill";
+function ue(t) {
+  return t && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") ? t.default : t;
 }
-function de(r) {
-  var o = r.default;
-  if (typeof o == "function") {
-    var l = function() {
-      return o.apply(this, arguments);
+function ce(t) {
+  var e = t.default;
+  if (typeof e == "function") {
+    var o = function() {
+      return e.apply(this, arguments);
     };
-    l.prototype = o.prototype;
+    o.prototype = e.prototype;
   } else
-    l = {};
-  return Object.defineProperty(l, "__esModule", {
+    o = {};
+  return Object.defineProperty(o, "__esModule", {
     value: !0
-  }), Object.keys(r).forEach(function(f) {
-    var u = Object.getOwnPropertyDescriptor(r, f);
-    Object.defineProperty(l, f, u.get ? u : {
+  }), Object.keys(t).forEach(function(n) {
+    var r = Object.getOwnPropertyDescriptor(t, n);
+    Object.defineProperty(o, n, r.get ? r : {
       enumerable: !0,
       get: function() {
-        return r[f];
+        return t[n];
       }
     });
-  }), l;
+  }), o;
 }
-var te = {}, k = {}, A = {}, w = {}, he = function(o) {
-  return ve(o) && !ge(o);
+var J = {}, S = {}, k = {}, A = {}, fe = function(e) {
+  return se(e) && !ye(e);
 };
-function ve(r) {
-  return !!r && typeof r == "object";
+function se(t) {
+  return !!t && typeof t == "object";
 }
-function ge(r) {
-  var o = Object.prototype.toString.call(r);
-  return o === "[object RegExp]" || o === "[object Date]" || be(r);
+function ye(t) {
+  var e = Object.prototype.toString.call(t);
+  return e === "[object RegExp]" || e === "[object Date]" || ve(t);
 }
-var pe = typeof Symbol == "function" && Symbol.for, me = pe ? Symbol.for("react.element") : 60103;
-function be(r) {
-  return r.$$typeof === me;
+var de = typeof Symbol == "function" && Symbol.for, he = de ? Symbol.for("react.element") : 60103;
+function ve(t) {
+  return t.$$typeof === he;
 }
-function _e(r) {
-  return Array.isArray(r) ? [] : {};
+function ge(t) {
+  return Array.isArray(t) ? [] : {};
 }
-function q(r, o) {
-  return o.clone !== !1 && o.isMergeableObject(r) ? _(_e(r), r, o) : r;
+function B(t, e) {
+  return e.clone !== !1 && e.isMergeableObject(t) ? _(ge(t), t, e) : t;
 }
-function Oe(r, o, l) {
-  return r.concat(o).map(function(f) {
-    return q(f, l);
+function pe(t, e, o) {
+  return t.concat(e).map(function(n) {
+    return B(n, o);
   });
 }
-function Se(r, o, l) {
-  var f = {};
-  return l.isMergeableObject(r) && Object.keys(r).forEach(function(u) {
-    f[u] = q(r[u], l);
-  }), Object.keys(o).forEach(function(u) {
-    !l.isMergeableObject(o[u]) || !r[u] ? f[u] = q(o[u], l) : f[u] = _(r[u], o[u], l);
-  }), f;
+function me(t, e, o) {
+  var n = {};
+  return o.isMergeableObject(t) && Object.keys(t).forEach(function(r) {
+    n[r] = B(t[r], o);
+  }), Object.keys(e).forEach(function(r) {
+    !o.isMergeableObject(e[r]) || !t[r] ? n[r] = B(e[r], o) : n[r] = _(t[r], e[r], o);
+  }), n;
 }
-function _(r, o, l) {
-  l = l || {}, l.arrayMerge = l.arrayMerge || Oe, l.isMergeableObject = l.isMergeableObject || he;
-  var f = Array.isArray(o), u = Array.isArray(r), y = f === u;
-  return y ? f ? l.arrayMerge(r, o, l) : Se(r, o, l) : q(o, l);
+function _(t, e, o) {
+  o = o || {}, o.arrayMerge = o.arrayMerge || pe, o.isMergeableObject = o.isMergeableObject || fe;
+  var n = Array.isArray(e), r = Array.isArray(t), l = n === r;
+  return l ? n ? o.arrayMerge(t, e, o) : me(t, e, o) : B(e, o);
 }
-_.all = function(o, l) {
-  if (!Array.isArray(o))
+_.all = function(e, o) {
+  if (!Array.isArray(e))
     throw new Error("first argument should be an array");
-  return o.reduce(function(f, u) {
-    return _(f, u, l);
+  return e.reduce(function(n, r) {
+    return _(n, r, o);
   }, {});
 };
-var ke = _;
-const Ae = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+var be = _;
+const _e = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: ke
-}, Symbol.toStringTag, { value: "Module" })), we = /* @__PURE__ */ de(Ae);
-var E = {}, N;
+  default: be
+}, Symbol.toStringTag, { value: "Module" })), Oe = /* @__PURE__ */ ce(_e);
+var w = {}, U;
 function b() {
-  if (N)
-    return E;
-  N = 1, Object.defineProperty(E, "__esModule", {
+  if (U)
+    return w;
+  U = 1, Object.defineProperty(w, "__esModule", {
     value: !0
   });
-  var r = function() {
-    function y(h, d) {
-      for (var s = 0; s < d.length; s++) {
-        var n = d[s];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(h, n.key, n);
+  var t = function() {
+    function l(s, f) {
+      for (var u = 0; u < f.length; u++) {
+        var i = f[u];
+        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(s, i.key, i);
       }
     }
-    return function(h, d, s) {
-      return d && y(h.prototype, d), s && y(h, s), h;
+    return function(s, f, u) {
+      return f && l(s.prototype, f), u && l(s, u), s;
     };
-  }(), o = m();
-  l(o);
-  function l(y) {
-    return y && y.__esModule ? y : {
-      default: y
+  }(), e = p();
+  o(e);
+  function o(l) {
+    return l && l.__esModule ? l : {
+      default: l
     };
   }
-  function f(y, h) {
-    if (!(y instanceof h))
+  function n(l, s) {
+    if (!(l instanceof s))
       throw new TypeError("Cannot call a class as a function");
   }
-  var u = function() {
-    function y(h) {
-      f(this, y), this.formatter = h;
+  var r = function() {
+    function l(s) {
+      n(this, l), this.formatter = s;
     }
-    return r(y, [{
+    return t(l, [{
       key: "onCreate",
       value: function() {
       }
@@ -117,59 +117,59 @@ function b() {
       key: "onUpdate",
       value: function() {
       }
-    }]), y;
+    }]), l;
   }();
-  return E.default = u, E;
+  return w.default = r, w;
 }
-var F;
-function m() {
-  if (F)
-    return w;
-  F = 1, Object.defineProperty(w, "__esModule", {
+var $;
+function p() {
+  if ($)
+    return A;
+  $ = 1, Object.defineProperty(A, "__esModule", {
     value: !0
   });
-  var r = function() {
-    function c(t, e) {
-      for (var i = 0; i < e.length; i++) {
-        var v = e[i];
-        v.enumerable = v.enumerable || !1, v.configurable = !0, "value" in v && (v.writable = !0), Object.defineProperty(t, v.key, v);
+  var t = function() {
+    function h(d, a) {
+      for (var c = 0; c < a.length; c++) {
+        var v = a[c];
+        v.enumerable = v.enumerable || !1, v.configurable = !0, "value" in v && (v.writable = !0), Object.defineProperty(d, v.key, v);
       }
     }
-    return function(t, e, i) {
-      return e && c(t.prototype, e), i && c(t, i), t;
+    return function(d, a, c) {
+      return a && h(d.prototype, a), c && h(d, c), d;
     };
-  }(), o = we, l = d(o), f = fe(), u = d(f), y = b();
-  d(y);
-  var h = O();
-  d(h);
-  function d(c) {
-    return c && c.__esModule ? c : {
-      default: c
+  }(), e = Oe, o = f(e), n = ae(), r = f(n), l = b();
+  f(l);
+  var s = O();
+  f(s);
+  function f(h) {
+    return h && h.__esModule ? h : {
+      default: h
     };
   }
-  function s(c, t) {
-    if (!(c instanceof t))
+  function u(h, d) {
+    if (!(h instanceof d))
       throw new TypeError("Cannot call a class as a function");
   }
-  var n = function(t, e) {
-    return e;
-  }, a = function() {
-    function c(t) {
-      var e = this, i = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-      s(this, c), this.onClick = function() {
-        e.hide();
-      }, this.quill = t, this.options = (0, l.default)(u.default, i, {
-        arrayMerge: n
+  var i = function(d, a) {
+    return a;
+  }, y = function() {
+    function h(d) {
+      var a = this, c = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+      u(this, h), this.onClick = function() {
+        a.hide();
+      }, this.quill = d, this.options = (0, o.default)(r.default, c, {
+        arrayMerge: i
       }), this.currentSpec = null, this.actions = [], this.overlay = document.createElement("div"), this.overlay.classList.add(this.options.overlay.className), this.options.overlay.style && Object.assign(this.overlay.style, this.options.overlay.style), document.execCommand("enableObjectResizing", !1, "false"), this.quill.root.parentNode.style.position = this.quill.root.parentNode.style.position || "relative", this.quill.root.addEventListener("click", this.onClick), this.specs = this.options.specs.map(function(v) {
-        return new v(e);
+        return new v(a);
       }), this.specs.forEach(function(v) {
         return v.init();
       });
     }
-    return r(c, [{
+    return t(h, [{
       key: "show",
-      value: function(e) {
-        this.currentSpec = e, this.currentSpec.setSelection(), this.setUserSelect("none"), this.quill.root.parentNode.appendChild(this.overlay), this.repositionOverlay(), this.createActions(e);
+      value: function(a) {
+        this.currentSpec = a, this.currentSpec.setSelection(), this.setUserSelect("none"), this.quill.root.parentNode.appendChild(this.overlay), this.repositionOverlay(), this.createActions(a);
       }
     }, {
       key: "hide",
@@ -179,37 +179,37 @@ function m() {
     }, {
       key: "update",
       value: function() {
-        this.repositionOverlay(), this.actions.forEach(function(e) {
-          return e.onUpdate();
+        this.repositionOverlay(), this.actions.forEach(function(a) {
+          return a.onUpdate();
         });
       }
     }, {
       key: "createActions",
-      value: function(e) {
-        var i = this;
-        this.actions = e.getActions().map(function(v) {
-          var g = new v(i);
+      value: function(a) {
+        var c = this;
+        this.actions = a.getActions().map(function(v) {
+          var g = new v(c);
           return g.onCreate(), g;
         });
       }
     }, {
       key: "destroyActions",
       value: function() {
-        this.actions.forEach(function(e) {
-          return e.onDestroy();
+        this.actions.forEach(function(a) {
+          return a.onDestroy();
         }), this.actions = [];
       }
     }, {
       key: "repositionOverlay",
       value: function() {
         if (!!this.currentSpec) {
-          var e = this.currentSpec.getOverlayElement();
-          if (!!e) {
-            var i = this.quill.root.parentNode, v = e.getBoundingClientRect(), g = i.getBoundingClientRect();
+          var a = this.currentSpec.getOverlayElement();
+          if (!!a) {
+            var c = this.quill.root.parentNode, v = a.getBoundingClientRect(), g = c.getBoundingClientRect();
             Object.assign(this.overlay.style, {
               display: "block",
-              left: v.left - g.left - 1 + i.scrollLeft + "px",
-              top: v.top - g.top + i.scrollTop + "px",
+              left: v.left - g.left - 1 + c.scrollLeft + "px",
+              top: v.top - g.top + c.scrollTop + "px",
               width: v.width + "px",
               height: v.height + "px"
             });
@@ -218,150 +218,150 @@ function m() {
       }
     }, {
       key: "setUserSelect",
-      value: function(e) {
-        var i = this, v = ["userSelect", "mozUserSelect", "webkitUserSelect", "msUserSelect"];
+      value: function(a) {
+        var c = this, v = ["userSelect", "mozUserSelect", "webkitUserSelect", "msUserSelect"];
         v.forEach(function(g) {
-          i.quill.root.style.setProperty(g, e), document.documentElement && document.documentElement.style.setProperty(g, e);
+          c.quill.root.style.setProperty(g, a), document.documentElement && document.documentElement.style.setProperty(g, a);
         });
       }
-    }]), c;
+    }]), h;
   }();
-  return w.default = a, w;
+  return A.default = y, A;
 }
-var x = {}, j = {};
-Object.defineProperty(j, "__esModule", {
+var E = {}, T = {};
+Object.defineProperty(T, "__esModule", {
   value: !0
 });
-var Ee = function() {
-  function r(o, l) {
-    for (var f = 0; f < l.length; f++) {
-      var u = l[f];
-      u.enumerable = u.enumerable || !1, u.configurable = !0, "value" in u && (u.writable = !0), Object.defineProperty(o, u.key, u);
+var Se = function() {
+  function t(e, o) {
+    for (var n = 0; n < o.length; n++) {
+      var r = o[n];
+      r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
   }
-  return function(o, l, f) {
-    return l && r(o.prototype, l), f && r(o, f), o;
+  return function(e, o, n) {
+    return o && t(e.prototype, o), n && t(e, n), e;
   };
 }();
-function I(r, o, l) {
-  return o in r ? Object.defineProperty(r, o, {
-    value: l,
+function q(t, e, o) {
+  return e in t ? Object.defineProperty(t, e, {
+    value: o,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : r[o] = l, r;
+  }) : t[e] = o, t;
 }
-function xe(r, o) {
-  if (!(r instanceof o))
+function ke(t, e) {
+  if (!(t instanceof e))
     throw new TypeError("Cannot call a class as a function");
 }
-var H = "left", L = "center", U = "right", Pe = function() {
-  function r(o) {
-    var l = this, f;
-    xe(this, r), this.applyStyle = o.aligner.applyStyle, this.alignAttribute = o.attribute, this.alignments = (f = {}, I(f, H, {
+var I = "left", H = "center", L = "right", Ae = function() {
+  function t(e) {
+    var o = this, n;
+    ke(this, t), this.applyStyle = e.aligner.applyStyle, this.alignAttribute = e.attribute, this.alignments = (n = {}, q(n, I, {
+      name: I,
+      icon: e.icons.left,
+      apply: function(l) {
+        o.setAlignment(l, I), o.setStyle(l, "inline", "left", "0 1em 1em 0");
+      }
+    }), q(n, H, {
       name: H,
-      icon: o.icons.left,
-      apply: function(y) {
-        l.setAlignment(y, H), l.setStyle(y, "inline", "left", "0 1em 1em 0");
+      icon: e.icons.center,
+      apply: function(l) {
+        o.setAlignment(l, H), o.setStyle(l, "block", null, "auto");
       }
-    }), I(f, L, {
+    }), q(n, L, {
       name: L,
-      icon: o.icons.center,
-      apply: function(y) {
-        l.setAlignment(y, L), l.setStyle(y, "block", null, "auto");
+      icon: e.icons.right,
+      apply: function(l) {
+        o.setAlignment(l, L), o.setStyle(l, "inline", "right", "0 0 1em 1em");
       }
-    }), I(f, U, {
-      name: U,
-      icon: o.icons.right,
-      apply: function(y) {
-        l.setAlignment(y, U), l.setStyle(y, "inline", "right", "0 0 1em 1em");
-      }
-    }), f);
+    }), n);
   }
-  return Ee(r, [{
+  return Se(t, [{
     key: "getAlignments",
     value: function() {
-      var l = this;
-      return Object.keys(this.alignments).map(function(f) {
-        return l.alignments[f];
+      var o = this;
+      return Object.keys(this.alignments).map(function(n) {
+        return o.alignments[n];
       });
     }
   }, {
     key: "clear",
-    value: function(l) {
-      l.removeAttribute(this.alignAttribute), this.setStyle(l, null, null, null);
+    value: function(o) {
+      o.removeAttribute(this.alignAttribute), this.setStyle(o, null, null, null);
     }
   }, {
     key: "isAligned",
-    value: function(l, f) {
-      return l.getAttribute(this.alignAttribute) === f.name;
+    value: function(o, n) {
+      return o.getAttribute(this.alignAttribute) === n.name;
     }
   }, {
     key: "setAlignment",
-    value: function(l, f) {
-      l.setAttribute(this.alignAttribute, f);
+    value: function(o, n) {
+      o.setAttribute(this.alignAttribute, n);
     }
   }, {
     key: "setStyle",
-    value: function(l, f, u, y) {
-      this.applyStyle && (l.style.setProperty("display", f), l.style.setProperty("float", u), l.style.setProperty("margin", y));
+    value: function(o, n, r, l) {
+      this.applyStyle && (o.style.setProperty("display", n), o.style.setProperty("float", r), o.style.setProperty("margin", l));
     }
-  }]), r;
+  }]), t;
 }();
-j.default = Pe;
-var $ = {}, V;
-function ne() {
-  if (V)
-    return $;
-  V = 1;
-  var r = m();
-  o(r);
+T.default = Ae;
+var C = {}, z;
+function Q() {
+  if (z)
+    return C;
+  z = 1;
+  var t = p();
+  e(t);
+  function e(o) {
+    return o && o.__esModule ? o : {
+      default: o
+    };
+  }
+  return C;
+}
+var x = {}, N;
+function Z() {
+  if (N)
+    return x;
+  N = 1, Object.defineProperty(x, "__esModule", {
+    value: !0
+  });
+  var t = function() {
+    function l(s, f) {
+      for (var u = 0; u < f.length; u++) {
+        var i = f[u];
+        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(s, i.key, i);
+      }
+    }
+    return function(s, f, u) {
+      return f && l(s.prototype, f), u && l(s, u), s;
+    };
+  }();
+  Q();
+  var e = p();
+  o(e);
   function o(l) {
     return l && l.__esModule ? l : {
       default: l
     };
   }
-  return $;
-}
-var P = {}, X;
-function re() {
-  if (X)
-    return P;
-  X = 1, Object.defineProperty(P, "__esModule", {
-    value: !0
-  });
-  var r = function() {
-    function y(h, d) {
-      for (var s = 0; s < d.length; s++) {
-        var n = d[s];
-        n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(h, n.key, n);
-      }
-    }
-    return function(h, d, s) {
-      return d && y(h.prototype, d), s && y(h, s), h;
-    };
-  }();
-  ne();
-  var o = m();
-  l(o);
-  function l(y) {
-    return y && y.__esModule ? y : {
-      default: y
-    };
-  }
-  function f(y, h) {
-    if (!(y instanceof h))
+  function n(l, s) {
+    if (!(l instanceof s))
       throw new TypeError("Cannot call a class as a function");
   }
-  var u = function() {
-    function y() {
-      f(this, y), this.toolbar = null, this.buttons = [];
+  var r = function() {
+    function l() {
+      n(this, l), this.toolbar = null, this.buttons = [];
     }
-    return r(y, [{
+    return t(l, [{
       key: "create",
-      value: function(d, s) {
-        var n = document.createElement("div");
-        return n.classList.add(d.options.align.toolbar.mainClassName), this.addToolbarStyle(d, n), this.addButtons(d, n, s), this.toolbar = n, this.toolbar;
+      value: function(f, u) {
+        var i = document.createElement("div");
+        return i.classList.add(f.options.align.toolbar.mainClassName), this.addToolbarStyle(f, i), this.addButtons(f, i, u), this.toolbar = i, this.toolbar;
       }
     }, {
       key: "destroy",
@@ -375,307 +375,100 @@ function re() {
       }
     }, {
       key: "addToolbarStyle",
-      value: function(d, s) {
-        d.options.align.toolbar.mainStyle && Object.assign(s.style, d.options.align.toolbar.mainStyle);
+      value: function(f, u) {
+        f.options.align.toolbar.mainStyle && Object.assign(u.style, f.options.align.toolbar.mainStyle);
       }
     }, {
       key: "addButtonStyle",
-      value: function(d, s, n) {
-        n.options.align.toolbar.buttonStyle && (Object.assign(d.style, n.options.align.toolbar.buttonStyle), s > 0 && (d.style.borderLeftWidth = "0")), n.options.align.toolbar.svgStyle && Object.assign(d.children[0].style, n.options.align.toolbar.svgStyle);
+      value: function(f, u, i) {
+        i.options.align.toolbar.buttonStyle && (Object.assign(f.style, i.options.align.toolbar.buttonStyle), u > 0 && (f.style.borderLeftWidth = "0")), i.options.align.toolbar.svgStyle && Object.assign(f.children[0].style, i.options.align.toolbar.svgStyle);
       }
     }, {
       key: "addButtons",
-      value: function(d, s, n) {
-        var a = this;
-        n.getAlignments().forEach(function(c, t) {
-          var e = document.createElement("span");
-          e.classList.add(d.options.align.toolbar.buttonClassName), e.innerHTML = c.icon, e.addEventListener("click", function() {
-            a.onButtonClick(e, d, c, n);
-          }), a.preselectButton(e, c, d, n), a.addButtonStyle(e, t, d), a.buttons.push(e), s.appendChild(e);
+      value: function(f, u, i) {
+        var y = this;
+        i.getAlignments().forEach(function(h, d) {
+          var a = document.createElement("span");
+          a.classList.add(f.options.align.toolbar.buttonClassName), a.innerHTML = h.icon, a.addEventListener("click", function() {
+            y.onButtonClick(a, f, h, i);
+          }), y.preselectButton(a, h, f, i), y.addButtonStyle(a, d, f), y.buttons.push(a), u.appendChild(a);
         });
       }
     }, {
       key: "preselectButton",
-      value: function(d, s, n, a) {
-        if (!!n.currentSpec) {
-          var c = n.currentSpec.getTargetElement();
-          !c || a.isAligned(c, s) && this.selectButton(n, d);
+      value: function(f, u, i, y) {
+        if (!!i.currentSpec) {
+          var h = i.currentSpec.getTargetElement();
+          !h || y.isAligned(h, u) && this.selectButton(i, f);
         }
       }
     }, {
       key: "onButtonClick",
-      value: function(d, s, n, a) {
-        if (!!s.currentSpec) {
-          var c = s.currentSpec.getTargetElement();
-          !c || this.clickButton(d, c, s, n, a);
+      value: function(f, u, i, y) {
+        if (!!u.currentSpec) {
+          var h = u.currentSpec.getTargetElement();
+          !h || this.clickButton(f, h, u, i, y);
         }
       }
     }, {
       key: "clickButton",
-      value: function(d, s, n, a, c) {
-        var t = this;
-        this.buttons.forEach(function(e) {
-          t.deselectButton(n, e);
-        }), c.isAligned(s, a) ? n.options.align.toolbar.allowDeselect ? c.clear(s) : this.selectButton(n, d) : (this.selectButton(n, d), a.apply(s)), n.update();
+      value: function(f, u, i, y, h) {
+        var d = this;
+        this.buttons.forEach(function(a) {
+          d.deselectButton(i, a);
+        }), h.isAligned(u, y) ? i.options.align.toolbar.allowDeselect ? h.clear(u) : this.selectButton(i, f) : (this.selectButton(i, f), y.apply(u)), i.update();
       }
     }, {
       key: "selectButton",
-      value: function(d, s) {
-        s.classList.add("is-selected"), d.options.align.toolbar.addButtonSelectStyle && s.style.setProperty("filter", "invert(20%)");
+      value: function(f, u) {
+        u.classList.add("is-selected"), f.options.align.toolbar.addButtonSelectStyle && u.style.setProperty("filter", "invert(20%)");
       }
     }, {
       key: "deselectButton",
-      value: function(d, s) {
-        s.classList.remove("is-selected"), d.options.align.toolbar.addButtonSelectStyle && s.style.removeProperty("filter");
+      value: function(f, u) {
+        u.classList.remove("is-selected"), f.options.align.toolbar.addButtonSelectStyle && u.style.removeProperty("filter");
       }
-    }]), y;
+    }]), l;
   }();
-  return P.default = u, P;
+  return x.default = r, x;
 }
-var W;
-function ie() {
-  if (W)
-    return x;
-  W = 1, Object.defineProperty(x, "__esModule", {
+var F;
+function ee() {
+  if (F)
+    return E;
+  F = 1, Object.defineProperty(E, "__esModule", {
     value: !0
   });
-  var r = function() {
-    function e(i, v) {
+  var t = function() {
+    function a(c, v) {
       for (var g = 0; g < v.length; g++) {
-        var p = v[g];
-        p.enumerable = p.enumerable || !1, p.configurable = !0, "value" in p && (p.writable = !0), Object.defineProperty(i, p.key, p);
+        var m = v[g];
+        m.enumerable = m.enumerable || !1, m.configurable = !0, "value" in m && (m.writable = !0), Object.defineProperty(c, m.key, m);
       }
     }
-    return function(i, v, g) {
-      return v && e(i.prototype, v), g && e(i, g), i;
+    return function(c, v, g) {
+      return v && a(c.prototype, v), g && a(c, g), c;
     };
-  }(), o = b(), l = s(o), f = m();
-  s(f);
-  var u = j, y = s(u);
-  ne();
-  var h = re(), d = s(h);
-  function s(e) {
-    return e && e.__esModule ? e : {
-      default: e
-    };
-  }
-  function n(e, i) {
-    if (!(e instanceof i))
-      throw new TypeError("Cannot call a class as a function");
-  }
-  function a(e, i) {
-    if (!e)
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return i && (typeof i == "object" || typeof i == "function") ? i : e;
-  }
-  function c(e, i) {
-    if (typeof i != "function" && i !== null)
-      throw new TypeError("Super expression must either be null or a function, not " + typeof i);
-    e.prototype = Object.create(i && i.prototype, {
-      constructor: {
-        value: e,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
-      }
-    }), i && (Object.setPrototypeOf ? Object.setPrototypeOf(e, i) : e.__proto__ = i);
-  }
-  var t = function(e) {
-    c(i, e);
-    function i(v) {
-      n(this, i);
-      var g = a(this, (i.__proto__ || Object.getPrototypeOf(i)).call(this, v));
-      return g.aligner = new y.default(v.options.align), g.toolbar = new d.default(), g;
-    }
-    return r(i, [{
-      key: "onCreate",
-      value: function() {
-        var g = this.toolbar.create(this.formatter, this.aligner);
-        this.formatter.overlay.appendChild(g);
-      }
-    }, {
-      key: "onDestroy",
-      value: function() {
-        var g = this.toolbar.getElement();
-        !g || (this.formatter.overlay.removeChild(g), this.toolbar.destroy());
-      }
-    }]), i;
-  }(l.default);
-  return x.default = t, x;
-}
-var R = {}, G;
-function oe() {
-  if (G)
-    return R;
-  G = 1, Object.defineProperty(R, "__esModule", {
-    value: !0
-  });
-  var r = function() {
-    function n(a, c) {
-      for (var t = 0; t < c.length; t++) {
-        var e = c[t];
-        e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object.defineProperty(a, e.key, e);
-      }
-    }
-    return function(a, c, t) {
-      return c && n(a.prototype, c), t && n(a, t), a;
-    };
-  }(), o = b(), l = u(o), f = m();
-  u(f);
-  function u(n) {
-    return n && n.__esModule ? n : {
-      default: n
-    };
-  }
-  function y(n, a) {
-    if (!(n instanceof a))
-      throw new TypeError("Cannot call a class as a function");
-  }
-  function h(n, a) {
-    if (!n)
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return a && (typeof a == "object" || typeof a == "function") ? a : n;
-  }
-  function d(n, a) {
-    if (typeof a != "function" && a !== null)
-      throw new TypeError("Super expression must either be null or a function, not " + typeof a);
-    n.prototype = Object.create(a && a.prototype, {
-      constructor: {
-        value: n,
-        enumerable: !1,
-        writable: !0,
-        configurable: !0
-      }
-    }), a && (Object.setPrototypeOf ? Object.setPrototypeOf(n, a) : n.__proto__ = a);
-  }
-  var s = function(n) {
-    d(a, n);
-    function a(c) {
-      y(this, a);
-      var t = h(this, (a.__proto__ || Object.getPrototypeOf(a)).call(this, c));
-      return t.onMouseDown = function(e) {
-        if (e.target instanceof HTMLElement && (t.dragHandle = e.target, t.setCursor(t.dragHandle.style.cursor), !!t.formatter.currentSpec)) {
-          var i = t.formatter.currentSpec.getTargetElement();
-          if (!!i) {
-            var v = i.getBoundingClientRect();
-            t.dragStartX = e.clientX, t.preDragWidth = v.width, t.targetRatio = v.height / v.width, document.addEventListener("mousemove", t.onDrag), document.addEventListener("mouseup", t.onMouseUp);
-          }
-        }
-      }, t.onDrag = function(e) {
-        if (!!t.formatter.currentSpec) {
-          var i = t.formatter.currentSpec.getTargetElement();
-          if (!!i) {
-            t.toggleUserSelect(!1);
-            var v = e.clientX - t.dragStartX, g = 0;
-            t.dragHandle === t.topLeftHandle || t.dragHandle === t.bottomLeftHandle ? g = Math.round(t.preDragWidth - v) : g = Math.round(t.preDragWidth + v);
-            var p = t.targetRatio * g;
-            i.setAttribute("width", "" + g), i.setAttribute("height", "" + p), t.formatter.update();
-          }
-        }
-      }, t.onMouseUp = function() {
-        t.setCursor(""), t.toggleUserSelect(!0), document.removeEventListener("mousemove", t.onDrag), document.removeEventListener("mouseup", t.onMouseUp);
-      }, t.topLeftHandle = t.createHandle("top-left", "nwse-resize"), t.topRightHandle = t.createHandle("top-right", "nesw-resize"), t.bottomRightHandle = t.createHandle("bottom-right", "nwse-resize"), t.bottomLeftHandle = t.createHandle("bottom-left", "nesw-resize"), t.dragHandle = null, t.dragStartX = 0, t.preDragWidth = 0, t.targetRatio = 0, t;
-    }
-    return r(a, [{
-      key: "onCreate",
-      value: function() {
-        this.formatter.overlay.appendChild(this.topLeftHandle), this.formatter.overlay.appendChild(this.topRightHandle), this.formatter.overlay.appendChild(this.bottomRightHandle), this.formatter.overlay.appendChild(this.bottomLeftHandle), this.repositionHandles(this.formatter.options.resize.handleStyle);
-      }
-    }, {
-      key: "onDestroy",
-      value: function() {
-        this.setCursor(""), this.formatter.overlay.removeChild(this.topLeftHandle), this.formatter.overlay.removeChild(this.topRightHandle), this.formatter.overlay.removeChild(this.bottomRightHandle), this.formatter.overlay.removeChild(this.bottomLeftHandle);
-      }
-    }, {
-      key: "createHandle",
-      value: function(t, e) {
-        var i = document.createElement("div");
-        return i.classList.add(this.formatter.options.resize.handleClassName), i.setAttribute("data-position", t), i.style.cursor = e, this.formatter.options.resize.handleStyle && Object.assign(i.style, this.formatter.options.resize.handleStyle), i.addEventListener("mousedown", this.onMouseDown), i;
-      }
-    }, {
-      key: "repositionHandles",
-      value: function(t) {
-        var e = "0px", i = "0px";
-        t && (t.width && (e = -parseFloat(t.width) / 2 + "px"), t.height && (i = -parseFloat(t.height) / 2 + "px")), Object.assign(this.topLeftHandle.style, {
-          left: e,
-          top: i
-        }), Object.assign(this.topRightHandle.style, {
-          right: e,
-          top: i
-        }), Object.assign(this.bottomRightHandle.style, {
-          right: e,
-          bottom: i
-        }), Object.assign(this.bottomLeftHandle.style, {
-          left: e,
-          bottom: i
-        });
-      }
-    }, {
-      key: "setCursor",
-      value: function(t) {
-        if (document.body && (document.body.style.cursor = t), this.formatter.currentSpec) {
-          var e = this.formatter.currentSpec.getOverlayElement();
-          e && (e.style.cursor = t);
-        }
-      }
-    }, {
-      key: "toggleUserSelect",
-      value: function(t) {
-        if (t) {
-          document.body.style.setProperty("-moz-user-select", "auto"), document.body.style.setProperty("-webkit-user-select", "auto"), document.body.style.setProperty("-ms-user-select", "auto"), document.body.style.setProperty("-o-user-select", "auto"), document.body.style.setProperty("user-select", "auto"), document.onselectstart = function() {
-            return !0;
-          }, document.onselect = function() {
-            return !0;
-          }, document.onselectionchange = function() {
-            return !0;
-          };
-          return;
-        }
-        document.body.style.setProperty("-moz-user-select", "none"), document.body.style.setProperty("-webkit-user-select", "none"), document.body.style.setProperty("-ms-user-select", "none"), document.body.style.setProperty("-o-user-select", "none"), document.body.style.setProperty("user-select", "none"), document.onselectstart = function() {
-          return !1;
-        }, document.onselect = function() {
-          return !1;
-        }, document.onselectionchange = function() {
-          return !1;
-        };
-      }
-    }]), a;
-  }(l.default);
-  return R.default = s, R;
-}
-var B = {}, K;
-function ae() {
-  if (K)
-    return B;
-  K = 1, Object.defineProperty(B, "__esModule", {
-    value: !0
-  });
-  var r = function() {
-    function a(c, t) {
-      for (var e = 0; e < t.length; e++) {
-        var i = t[e];
-        i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(c, i.key, i);
-      }
-    }
-    return function(c, t, e) {
-      return t && a(c.prototype, t), e && a(c, e), c;
-    };
-  }(), o = se, l = y(o), f = b(), u = y(f);
-  function y(a) {
+  }(), e = b(), o = u(e), n = p();
+  u(n);
+  var r = T, l = u(r);
+  Q();
+  var s = Z(), f = u(s);
+  function u(a) {
     return a && a.__esModule ? a : {
       default: a
     };
   }
-  function h(a, c) {
+  function i(a, c) {
     if (!(a instanceof c))
       throw new TypeError("Cannot call a class as a function");
   }
-  function d(a, c) {
+  function y(a, c) {
     if (!a)
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return c && (typeof c == "object" || typeof c == "function") ? c : a;
   }
-  function s(a, c) {
+  function h(a, c) {
     if (typeof c != "function" && c !== null)
       throw new TypeError("Super expression must either be null or a function, not " + typeof c);
     a.prototype = Object.create(c && c.prototype, {
@@ -687,77 +480,276 @@ function ae() {
       }
     }), c && (Object.setPrototypeOf ? Object.setPrototypeOf(a, c) : a.__proto__ = c);
   }
-  var n = function(a) {
-    s(c, a);
-    function c() {
-      var t, e, i, v;
-      h(this, c);
-      for (var g = arguments.length, p = Array(g), S = 0; S < g; S++)
-        p[S] = arguments[S];
-      return v = (e = (i = d(this, (t = c.__proto__ || Object.getPrototypeOf(c)).call.apply(t, [this].concat(p))), i), i.onKeyUp = function(z) {
-        if (!!i.formatter.currentSpec && (z.keyCode === 46 || z.keyCode === 8)) {
-          var C = l.default.find(i.formatter.currentSpec.getTargetElement());
-          C && C.deleteAt(0), i.formatter.hide();
-        }
-      }, e), d(i, v);
+  var d = function(a) {
+    h(c, a);
+    function c(v) {
+      i(this, c);
+      var g = y(this, (c.__proto__ || Object.getPrototypeOf(c)).call(this, v));
+      return g.aligner = new l.default(v.options.align), g.toolbar = new f.default(), g;
     }
-    return r(c, [{
+    return t(c, [{
       key: "onCreate",
       value: function() {
-        document.addEventListener("keyup", this.onKeyUp, !0), this.formatter.quill.root.addEventListener("input", this.onKeyUp, !0);
+        var g = this.toolbar.create(this.formatter, this.aligner);
+        this.formatter.overlay.appendChild(g);
       }
     }, {
       key: "onDestroy",
       value: function() {
-        document.removeEventListener("keyup", this.onKeyUp), this.formatter.quill.root.removeEventListener("input", this.onKeyUp);
+        var g = this.toolbar.getElement();
+        !g || (this.formatter.overlay.removeChild(g), this.toolbar.destroy());
       }
     }]), c;
-  }(u.default);
-  return B.default = n, B;
+  }(o.default);
+  return E.default = d, E;
 }
-var Y;
-function O() {
-  if (Y)
-    return A;
-  Y = 1, Object.defineProperty(A, "__esModule", {
-    value: !0
-  });
-  var r = function() {
-    function t(e, i) {
-      for (var v = 0; v < i.length; v++) {
-        var g = i[v];
-        g.enumerable = g.enumerable || !1, g.configurable = !0, "value" in g && (g.writable = !0), Object.defineProperty(e, g.key, g);
+var j = {};
+Object.defineProperty(j, "__esModule", {
+  value: !0
+});
+var we = function() {
+  function t(e, o) {
+    for (var n = 0; n < o.length; n++) {
+      var r = o[n];
+      r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+    }
+  }
+  return function(e, o, n) {
+    return o && t(e.prototype, o), n && t(e, n), e;
+  };
+}(), Ee = b(), xe = te(Ee), Pe = p();
+te(Pe);
+function te(t) {
+  return t && t.__esModule ? t : {
+    default: t
+  };
+}
+function Re(t, e) {
+  if (!(t instanceof e))
+    throw new TypeError("Cannot call a class as a function");
+}
+function Be(t, e) {
+  if (!t)
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  return e && (typeof e == "object" || typeof e == "function") ? e : t;
+}
+function Te(t, e) {
+  if (typeof e != "function" && e !== null)
+    throw new TypeError("Super expression must either be null or a function, not " + typeof e);
+  t.prototype = Object.create(e && e.prototype, {
+    constructor: {
+      value: t,
+      enumerable: !1,
+      writable: !0,
+      configurable: !0
+    }
+  }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
+}
+var je = function(t) {
+  Te(e, t);
+  function e(o) {
+    Re(this, e);
+    var n = Be(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, o));
+    return n.onMouseDown = function(r) {
+      if (r.target instanceof HTMLElement && (n.dragHandle = r.target, n.setCursor(n.dragHandle.style.cursor), !!n.formatter.currentSpec)) {
+        var l = n.formatter.currentSpec.getTargetElement();
+        if (!!l) {
+          var s = l.getBoundingClientRect();
+          n.dragStartX = r.clientX, n.preDragWidth = s.width, n.targetRatio = s.height / s.width, document.addEventListener("mousemove", n.onDrag), document.addEventListener("mouseup", n.onMouseUp);
+        }
+      }
+    }, n.onDrag = function(r) {
+      if (!!n.formatter.currentSpec) {
+        var l = n.formatter.currentSpec.getTargetElement();
+        if (!!l) {
+          n.toggleUserSelect(!1);
+          var s = r.clientX - n.dragStartX, f = 0;
+          n.dragHandle === n.topLeftHandle || n.dragHandle === n.bottomLeftHandle ? f = Math.round(n.preDragWidth - s) : f = Math.round(n.preDragWidth + s);
+          var u = n.targetRatio * f;
+          l.setAttribute("width", "" + f), l.setAttribute("height", "" + u), n.formatter.update();
+        }
+      }
+    }, n.onMouseUp = function() {
+      n.setCursor(""), n.toggleUserSelect(!0), document.removeEventListener("mousemove", n.onDrag), document.removeEventListener("mouseup", n.onMouseUp);
+    }, n.topLeftHandle = n.createHandle("top-left", "nwse-resize"), n.topRightHandle = n.createHandle("top-right", "nesw-resize"), n.bottomRightHandle = n.createHandle("bottom-right", "nwse-resize"), n.bottomLeftHandle = n.createHandle("bottom-left", "nesw-resize"), n.dragHandle = null, n.dragStartX = 0, n.preDragWidth = 0, n.targetRatio = 0, n;
+  }
+  return we(e, [{
+    key: "onCreate",
+    value: function() {
+      this.formatter.overlay.appendChild(this.topLeftHandle), this.formatter.overlay.appendChild(this.topRightHandle), this.formatter.overlay.appendChild(this.bottomRightHandle), this.formatter.overlay.appendChild(this.bottomLeftHandle), this.repositionHandles(this.formatter.options.resize.handleStyle);
+    }
+  }, {
+    key: "onDestroy",
+    value: function() {
+      this.setCursor(""), this.formatter.overlay.removeChild(this.topLeftHandle), this.formatter.overlay.removeChild(this.topRightHandle), this.formatter.overlay.removeChild(this.bottomRightHandle), this.formatter.overlay.removeChild(this.bottomLeftHandle);
+    }
+  }, {
+    key: "createHandle",
+    value: function(n, r) {
+      var l = document.createElement("div");
+      return l.classList.add(this.formatter.options.resize.handleClassName), l.setAttribute("data-position", n), l.style.cursor = r, this.formatter.options.resize.handleStyle && Object.assign(l.style, this.formatter.options.resize.handleStyle), l.addEventListener("mousedown", this.onMouseDown), l;
+    }
+  }, {
+    key: "repositionHandles",
+    value: function(n) {
+      var r = "0px", l = "0px";
+      n && (n.width && (r = -parseFloat(n.width) / 2 + "px"), n.height && (l = -parseFloat(n.height) / 2 + "px")), Object.assign(this.topLeftHandle.style, {
+        left: r,
+        top: l
+      }), Object.assign(this.topRightHandle.style, {
+        right: r,
+        top: l
+      }), Object.assign(this.bottomRightHandle.style, {
+        right: r,
+        bottom: l
+      }), Object.assign(this.bottomLeftHandle.style, {
+        left: r,
+        bottom: l
+      });
+    }
+  }, {
+    key: "setCursor",
+    value: function(n) {
+      if (document.body && (document.body.style.cursor = n), this.formatter.currentSpec) {
+        var r = this.formatter.currentSpec.getOverlayElement();
+        r && (r.style.cursor = n);
       }
     }
-    return function(e, i, v) {
-      return i && t(e.prototype, i), v && t(e, v), e;
+  }, {
+    key: "toggleUserSelect",
+    value: function(n) {
+      if (n) {
+        document.body.style.setProperty("-moz-user-select", "auto"), document.body.style.setProperty("-webkit-user-select", "auto"), document.body.style.setProperty("-ms-user-select", "auto"), document.body.style.setProperty("-o-user-select", "auto"), document.body.style.setProperty("user-select", "auto"), document.onselectstart = function() {
+          return !0;
+        }, document.onselect = function() {
+          return !0;
+        }, document.onselectionchange = function() {
+          return !0;
+        };
+        return;
+      }
+      document.body.style.setProperty("-moz-user-select", "none"), document.body.style.setProperty("-webkit-user-select", "none"), document.body.style.setProperty("-ms-user-select", "none"), document.body.style.setProperty("-o-user-select", "none"), document.body.style.setProperty("user-select", "none"), document.onselectstart = function() {
+        return !1;
+      }, document.onselect = function() {
+        return !1;
+      }, document.onselectionchange = function() {
+        return !1;
+      };
+    }
+  }]), e;
+}(xe.default);
+j.default = je;
+var D = {};
+Object.defineProperty(D, "__esModule", {
+  value: !0
+});
+var De = function() {
+  function t(e, o) {
+    for (var n = 0; n < o.length; n++) {
+      var r = o[n];
+      r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+    }
+  }
+  return function(e, o, n) {
+    return o && t(e.prototype, o), n && t(e, n), e;
+  };
+}(), Me = le, qe = ne(Me), Ie = b(), He = ne(Ie);
+function ne(t) {
+  return t && t.__esModule ? t : {
+    default: t
+  };
+}
+function Le(t, e) {
+  if (!(t instanceof e))
+    throw new TypeError("Cannot call a class as a function");
+}
+function V(t, e) {
+  if (!t)
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  return e && (typeof e == "object" || typeof e == "function") ? e : t;
+}
+function Ue(t, e) {
+  if (typeof e != "function" && e !== null)
+    throw new TypeError("Super expression must either be null or a function, not " + typeof e);
+  t.prototype = Object.create(e && e.prototype, {
+    constructor: {
+      value: t,
+      enumerable: !1,
+      writable: !0,
+      configurable: !0
+    }
+  }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
+}
+var $e = function(t) {
+  Ue(e, t);
+  function e() {
+    var o, n, r, l;
+    Le(this, e);
+    for (var s = arguments.length, f = Array(s), u = 0; u < s; u++)
+      f[u] = arguments[u];
+    return l = (n = (r = V(this, (o = e.__proto__ || Object.getPrototypeOf(e)).call.apply(o, [this].concat(f))), r), r.onKeyUp = function(i) {
+      if (!!r.formatter.currentSpec && (i.keyCode === 46 || i.keyCode === 8)) {
+        var y = qe.default.find(r.formatter.currentSpec.getTargetElement());
+        y && y.deleteAt(0), r.formatter.hide();
+      }
+    }, n), V(r, l);
+  }
+  return De(e, [{
+    key: "onCreate",
+    value: function() {
+      document.addEventListener("keyup", this.onKeyUp, !0), this.formatter.quill.root.addEventListener("input", this.onKeyUp, !0);
+    }
+  }, {
+    key: "onDestroy",
+    value: function() {
+      document.removeEventListener("keyup", this.onKeyUp), this.formatter.quill.root.removeEventListener("input", this.onKeyUp);
+    }
+  }]), e;
+}(He.default);
+D.default = $e;
+var X;
+function O() {
+  if (X)
+    return k;
+  X = 1, Object.defineProperty(k, "__esModule", {
+    value: !0
+  });
+  var t = function() {
+    function d(a, c) {
+      for (var v = 0; v < c.length; v++) {
+        var g = c[v];
+        g.enumerable = g.enumerable || !1, g.configurable = !0, "value" in g && (g.writable = !0), Object.defineProperty(a, g.key, g);
+      }
+    }
+    return function(a, c, v) {
+      return c && d(a.prototype, c), v && d(a, v), a;
     };
-  }(), o = m();
-  n(o);
-  var l = b();
-  n(l);
-  var f = ie(), u = n(f), y = oe(), h = n(y), d = ae(), s = n(d);
-  function n(t) {
-    return t && t.__esModule ? t : {
-      default: t
+  }(), e = p();
+  i(e);
+  var o = b();
+  i(o);
+  var n = ee(), r = i(n), l = j, s = i(l), f = D, u = i(f);
+  function i(d) {
+    return d && d.__esModule ? d : {
+      default: d
     };
   }
-  function a(t, e) {
-    if (!(t instanceof e))
+  function y(d, a) {
+    if (!(d instanceof a))
       throw new TypeError("Cannot call a class as a function");
   }
-  var c = function() {
-    function t(e) {
-      a(this, t), this.formatter = e;
+  var h = function() {
+    function d(a) {
+      y(this, d), this.formatter = a;
     }
-    return r(t, [{
+    return t(d, [{
       key: "init",
       value: function() {
       }
     }, {
       key: "getActions",
       value: function() {
-        return [u.default, h.default, s.default];
+        return [r.default, s.default, u.default];
       }
     }, {
       key: "getTargetElement",
@@ -778,66 +770,66 @@ function O() {
       key: "onHide",
       value: function() {
       }
-    }]), t;
+    }]), d;
   }();
-  return A.default = c, A;
+  return k.default = h, k;
 }
-var D = {}, J;
-function le() {
-  if (J)
-    return D;
-  J = 1, Object.defineProperty(D, "__esModule", {
+var P = {}, W;
+function re() {
+  if (W)
+    return P;
+  W = 1, Object.defineProperty(P, "__esModule", {
     value: !0
   });
-  var r = function() {
-    function n(a, c) {
-      for (var t = 0; t < c.length; t++) {
-        var e = c[t];
-        e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object.defineProperty(a, e.key, e);
+  var t = function() {
+    function i(y, h) {
+      for (var d = 0; d < h.length; d++) {
+        var a = h[d];
+        a.enumerable = a.enumerable || !1, a.configurable = !0, "value" in a && (a.writable = !0), Object.defineProperty(y, a.key, a);
       }
     }
-    return function(a, c, t) {
-      return c && n(a.prototype, c), t && n(a, t), a;
+    return function(y, h, d) {
+      return h && i(y.prototype, h), d && i(y, d), y;
     };
-  }(), o = O(), l = u(o), f = m();
-  u(f);
-  function u(n) {
-    return n && n.__esModule ? n : {
-      default: n
+  }(), e = O(), o = r(e), n = p();
+  r(n);
+  function r(i) {
+    return i && i.__esModule ? i : {
+      default: i
     };
   }
-  function y(n, a) {
-    if (!(n instanceof a))
+  function l(i, y) {
+    if (!(i instanceof y))
       throw new TypeError("Cannot call a class as a function");
   }
-  function h(n, a) {
-    if (!n)
+  function s(i, y) {
+    if (!i)
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return a && (typeof a == "object" || typeof a == "function") ? a : n;
+    return y && (typeof y == "object" || typeof y == "function") ? y : i;
   }
-  function d(n, a) {
-    if (typeof a != "function" && a !== null)
-      throw new TypeError("Super expression must either be null or a function, not " + typeof a);
-    n.prototype = Object.create(a && a.prototype, {
+  function f(i, y) {
+    if (typeof y != "function" && y !== null)
+      throw new TypeError("Super expression must either be null or a function, not " + typeof y);
+    i.prototype = Object.create(y && y.prototype, {
       constructor: {
-        value: n,
+        value: i,
         enumerable: !1,
         writable: !0,
         configurable: !0
       }
-    }), a && (Object.setPrototypeOf ? Object.setPrototypeOf(n, a) : n.__proto__ = a);
+    }), y && (Object.setPrototypeOf ? Object.setPrototypeOf(i, y) : i.__proto__ = y);
   }
-  var s = function(n) {
-    d(a, n);
-    function a(c) {
-      y(this, a);
-      var t = h(this, (a.__proto__ || Object.getPrototypeOf(a)).call(this, c));
-      return t.onClick = function(e) {
-        var i = e.target;
-        !(i instanceof HTMLElement) || i.tagName !== "IMG" || (t.img = i, t.formatter.show(t));
-      }, t.img = null, t;
+  var u = function(i) {
+    f(y, i);
+    function y(h) {
+      l(this, y);
+      var d = s(this, (y.__proto__ || Object.getPrototypeOf(y)).call(this, h));
+      return d.onClick = function(a) {
+        var c = a.target;
+        !(c instanceof HTMLElement) || c.tagName !== "IMG" || (d.img = c, d.formatter.show(d));
+      }, d.img = null, d;
     }
-    return r(a, [{
+    return t(y, [{
       key: "init",
       value: function() {
         this.formatter.quill.root.addEventListener("click", this.onClick);
@@ -852,69 +844,69 @@ function le() {
       value: function() {
         this.img = null;
       }
-    }]), a;
-  }(l.default);
-  return D.default = s, D;
+    }]), y;
+  }(o.default);
+  return P.default = u, P;
 }
-var T = {}, M = {};
+var R = {}, M = {};
 Object.defineProperty(M, "__esModule", {
   value: !0
 });
-var Re = function() {
-  function r(o, l) {
-    for (var f = 0; f < l.length; f++) {
-      var u = l[f];
-      u.enumerable = u.enumerable || !1, u.configurable = !0, "value" in u && (u.writable = !0), Object.defineProperty(o, u.key, u);
+var Ce = function() {
+  function t(e, o) {
+    for (var n = 0; n < o.length; n++) {
+      var r = o[n];
+      r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
   }
-  return function(o, l, f) {
-    return l && r(o.prototype, l), f && r(o, f), o;
+  return function(e, o, n) {
+    return o && t(e.prototype, o), n && t(e, n), e;
   };
-}(), Be = O(), De = ue(Be), Te = m();
-ue(Te);
-function ue(r) {
-  return r && r.__esModule ? r : {
-    default: r
+}(), ze = O(), Ne = oe(ze), Fe = p();
+oe(Fe);
+function oe(t) {
+  return t && t.__esModule ? t : {
+    default: t
   };
 }
-function qe(r, o) {
-  if (!(r instanceof o))
+function Ve(t, e) {
+  if (!(t instanceof e))
     throw new TypeError("Cannot call a class as a function");
 }
-function je(r, o) {
-  if (!r)
+function Xe(t, e) {
+  if (!t)
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  return o && (typeof o == "object" || typeof o == "function") ? o : r;
+  return e && (typeof e == "object" || typeof e == "function") ? e : t;
 }
-function Me(r, o) {
-  if (typeof o != "function" && o !== null)
-    throw new TypeError("Super expression must either be null or a function, not " + typeof o);
-  r.prototype = Object.create(o && o.prototype, {
+function We(t, e) {
+  if (typeof e != "function" && e !== null)
+    throw new TypeError("Super expression must either be null or a function, not " + typeof e);
+  t.prototype = Object.create(e && e.prototype, {
     constructor: {
-      value: r,
+      value: t,
       enumerable: !1,
       writable: !0,
       configurable: !0
     }
-  }), o && (Object.setPrototypeOf ? Object.setPrototypeOf(r, o) : r.__proto__ = o);
+  }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
 }
-var Q = "data-blot-formatter-unclickable-bound", Ie = "blot-formatter__proxy-image", He = function(r) {
-  Me(o, r);
-  function o(l, f) {
-    qe(this, o);
-    var u = je(this, (o.__proto__ || Object.getPrototypeOf(o)).call(this, l));
-    return u.onTextChange = function() {
-      Array.from(document.querySelectorAll(u.selector + ":not([" + Q + "])")).forEach(function(y) {
-        y.setAttribute(Q, "true"), y.addEventListener("mouseenter", u.onMouseEnter);
+var G = "data-blot-formatter-unclickable-bound", Ge = "blot-formatter__proxy-image", Ke = function(t) {
+  We(e, t);
+  function e(o, n) {
+    Ve(this, e);
+    var r = Xe(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this, o));
+    return r.onTextChange = function() {
+      Array.from(document.querySelectorAll(r.selector + ":not([" + G + "])")).forEach(function(l) {
+        l.setAttribute(G, "true"), l.addEventListener("mouseenter", r.onMouseEnter);
       });
-    }, u.onMouseEnter = function(y) {
-      var h = y.target;
-      h instanceof HTMLElement && (u.nextUnclickable = h, u.repositionProxyImage(u.nextUnclickable));
-    }, u.onProxyImageClick = function() {
-      u.unclickable = u.nextUnclickable, u.nextUnclickable = null, u.formatter.show(u), u.hideProxyImage();
-    }, u.selector = f, u.unclickable = null, u.nextUnclickable = null, u;
+    }, r.onMouseEnter = function(l) {
+      var s = l.target;
+      s instanceof HTMLElement && (r.nextUnclickable = s, r.repositionProxyImage(r.nextUnclickable));
+    }, r.onProxyImageClick = function() {
+      r.unclickable = r.nextUnclickable, r.nextUnclickable = null, r.formatter.show(r), r.hideProxyImage();
+    }, r.selector = n, r.unclickable = null, r.nextUnclickable = null, r;
   }
-  return Re(o, [{
+  return Ce(e, [{
     key: "init",
     value: function() {
       document.body && document.body.appendChild(this.createProxyImage()), this.hideProxyImage(), this.proxyImage.addEventListener("click", this.onProxyImageClick), this.formatter.quill.on("text-change", this.onTextChange);
@@ -937,8 +929,8 @@ var Q = "data-blot-formatter-unclickable-bound", Ie = "blot-formatter__proxy-ima
   }, {
     key: "createProxyImage",
     value: function() {
-      var f = document.createElement("canvas"), u = f.getContext("2d");
-      return u.globalAlpha = 0, u.fillRect(0, 0, 1, 1), this.proxyImage = document.createElement("img"), this.proxyImage.src = f.toDataURL("image/png"), this.proxyImage.alt = "", this.proxyImage.classList.add(Ie), Object.assign(this.proxyImage.style, {
+      var n = document.createElement("canvas"), r = n.getContext("2d");
+      return r.globalAlpha = 0, r.fillRect(0, 0, 1, 1), this.proxyImage = document.createElement("img"), this.proxyImage.src = n.toDataURL("image/png"), this.proxyImage.alt = "", this.proxyImage.classList.add(Ge), Object.assign(this.proxyImage.style, {
         position: "absolute",
         margin: "0"
       }), this.proxyImage;
@@ -952,80 +944,80 @@ var Q = "data-blot-formatter-unclickable-bound", Ie = "blot-formatter__proxy-ima
     }
   }, {
     key: "repositionProxyImage",
-    value: function(f) {
-      var u = f.getBoundingClientRect();
+    value: function(n) {
+      var r = n.getBoundingClientRect();
       Object.assign(this.proxyImage.style, {
         display: "block",
-        left: u.left + window.pageXOffset + "px",
-        top: u.top + window.pageYOffset + "px",
-        width: u.width + "px",
-        height: u.height + "px"
+        left: r.left + window.pageXOffset + "px",
+        top: r.top + window.pageYOffset + "px",
+        width: r.width + "px",
+        height: r.height + "px"
       });
     }
-  }]), o;
-}(De.default);
-M.default = He;
-var Z;
-function ce() {
-  if (Z)
-    return T;
-  Z = 1, Object.defineProperty(T, "__esModule", {
+  }]), e;
+}(Ne.default);
+M.default = Ke;
+var K;
+function ie() {
+  if (K)
+    return R;
+  K = 1, Object.defineProperty(R, "__esModule", {
     value: !0
   });
-  var r = M, o = f(r), l = m();
-  f(l);
-  function f(s) {
-    return s && s.__esModule ? s : {
-      default: s
+  var t = M, e = n(t), o = p();
+  n(o);
+  function n(u) {
+    return u && u.__esModule ? u : {
+      default: u
     };
   }
-  function u(s, n) {
-    if (!(s instanceof n))
+  function r(u, i) {
+    if (!(u instanceof i))
       throw new TypeError("Cannot call a class as a function");
   }
-  function y(s, n) {
-    if (!s)
+  function l(u, i) {
+    if (!u)
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && (typeof n == "object" || typeof n == "function") ? n : s;
+    return i && (typeof i == "object" || typeof i == "function") ? i : u;
   }
-  function h(s, n) {
-    if (typeof n != "function" && n !== null)
-      throw new TypeError("Super expression must either be null or a function, not " + typeof n);
-    s.prototype = Object.create(n && n.prototype, {
+  function s(u, i) {
+    if (typeof i != "function" && i !== null)
+      throw new TypeError("Super expression must either be null or a function, not " + typeof i);
+    u.prototype = Object.create(i && i.prototype, {
       constructor: {
-        value: s,
+        value: u,
         enumerable: !1,
         writable: !0,
         configurable: !0
       }
-    }), n && (Object.setPrototypeOf ? Object.setPrototypeOf(s, n) : s.__proto__ = n);
+    }), i && (Object.setPrototypeOf ? Object.setPrototypeOf(u, i) : u.__proto__ = i);
   }
-  var d = function(s) {
-    h(n, s);
-    function n(a) {
-      return u(this, n), y(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, a, "iframe.ql-video"));
+  var f = function(u) {
+    s(i, u);
+    function i(y) {
+      return r(this, i), l(this, (i.__proto__ || Object.getPrototypeOf(i)).call(this, y, "iframe.ql-video"));
     }
-    return n;
-  }(o.default);
-  return T.default = d, T;
+    return i;
+  }(e.default);
+  return R.default = f, R;
 }
-var ee;
-function fe() {
-  if (ee)
-    return k;
-  ee = 1, Object.defineProperty(k, "__esModule", {
+var Y;
+function ae() {
+  if (Y)
+    return S;
+  Y = 1, Object.defineProperty(S, "__esModule", {
     value: !0
   });
-  var r = O();
-  y(r);
-  var o = le(), l = y(o), f = ce(), u = y(f);
-  function y(d) {
-    return d && d.__esModule ? d : {
-      default: d
+  var t = O();
+  l(t);
+  var e = re(), o = l(e), n = ie(), r = l(n);
+  function l(f) {
+    return f && f.__esModule ? f : {
+      default: f
     };
   }
-  var h = {
-    specs: [l.default, u.default],
+  var s = {
+    specs: [o.default, r.default],
     overlay: {
       className: "blot-formatter__overlay",
       style: {
@@ -1112,103 +1104,103 @@ function fe() {
       }
     }
   };
-  return k.default = h, k;
+  return S.default = s, S;
 }
-(function(r) {
-  Object.defineProperty(r, "__esModule", {
+(function(t) {
+  Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = fe();
-  Object.defineProperty(r, "DefaultOptions", {
+  var e = ae();
+  Object.defineProperty(t, "DefaultOptions", {
     enumerable: !0,
     get: function() {
-      return e(o).default;
+      return a(e).default;
     }
   });
-  var l = m();
-  Object.defineProperty(r, "default", {
+  var o = p();
+  Object.defineProperty(t, "default", {
     enumerable: !0,
     get: function() {
-      return e(l).default;
+      return a(o).default;
     }
   });
-  var f = b();
-  Object.defineProperty(r, "Action", {
+  var n = b();
+  Object.defineProperty(t, "Action", {
     enumerable: !0,
     get: function() {
-      return e(f).default;
+      return a(n).default;
     }
   });
-  var u = ie();
-  Object.defineProperty(r, "AlignAction", {
+  var r = ee();
+  Object.defineProperty(t, "AlignAction", {
     enumerable: !0,
     get: function() {
-      return e(u).default;
+      return a(r).default;
     }
   });
-  var y = j;
-  Object.defineProperty(r, "DefaultAligner", {
+  var l = T;
+  Object.defineProperty(t, "DefaultAligner", {
     enumerable: !0,
     get: function() {
-      return e(y).default;
+      return a(l).default;
     }
   });
-  var h = re();
-  Object.defineProperty(r, "DefaultToolbar", {
+  var s = Z();
+  Object.defineProperty(t, "DefaultToolbar", {
     enumerable: !0,
     get: function() {
-      return e(h).default;
+      return a(s).default;
     }
   });
-  var d = ae();
-  Object.defineProperty(r, "DeleteAction", {
+  var f = D;
+  Object.defineProperty(t, "DeleteAction", {
     enumerable: !0,
     get: function() {
-      return e(d).default;
+      return a(f).default;
     }
   });
-  var s = oe();
-  Object.defineProperty(r, "ResizeAction", {
+  var u = j;
+  Object.defineProperty(t, "ResizeAction", {
     enumerable: !0,
     get: function() {
-      return e(s).default;
+      return a(u).default;
     }
   });
-  var n = O();
-  Object.defineProperty(r, "BlotSpec", {
+  var i = O();
+  Object.defineProperty(t, "BlotSpec", {
     enumerable: !0,
     get: function() {
-      return e(n).default;
+      return a(i).default;
     }
   });
-  var a = le();
-  Object.defineProperty(r, "ImageSpec", {
+  var y = re();
+  Object.defineProperty(t, "ImageSpec", {
     enumerable: !0,
     get: function() {
-      return e(a).default;
+      return a(y).default;
     }
   });
-  var c = M;
-  Object.defineProperty(r, "UnclickableBlotSpec", {
+  var h = M;
+  Object.defineProperty(t, "UnclickableBlotSpec", {
     enumerable: !0,
     get: function() {
-      return e(c).default;
+      return a(h).default;
     }
   });
-  var t = ce();
-  Object.defineProperty(r, "IframeVideoSpec", {
+  var d = ie();
+  Object.defineProperty(t, "IframeVideoSpec", {
     enumerable: !0,
     get: function() {
-      return e(t).default;
+      return a(d).default;
     }
   });
-  function e(i) {
-    return i && i.__esModule ? i : {
-      default: i
+  function a(c) {
+    return c && c.__esModule ? c : {
+      default: c
     };
   }
-})(te);
-const Ue = /* @__PURE__ */ ye(te);
+})(J);
+const Je = /* @__PURE__ */ ue(J);
 export {
-  Ue as BlotFormatter
+  Je as BlotFormatter
 };
